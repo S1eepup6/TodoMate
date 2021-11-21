@@ -218,7 +218,7 @@ body {
     color: #0b0809;
   }
   .input-list > div {
-    font-size: 10px;
+    font-size: 14px;
     width: 60%;
     float: left;
     color: #2ebaf1;
@@ -229,7 +229,7 @@ body {
     float: left;
     width: 10%;
     cursor: pointer;
-    font-size: 10px;
+    font-size: 14px;
     padding: 10px;
     background: #0b0809;
     border: none;
