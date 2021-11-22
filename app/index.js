@@ -320,10 +320,10 @@ function deleteTodo(){
     console.log(idx)
     if (idx > -1) {
         todoList[keyValue].splice(idx, 1);
-        stressList[keyValue].splice(idx, 1);
+        stressList[keyStressVal].splice(idx, 1);
     }
     localStorage.setItem(keyValue, todoList[keyValue]);
-    localStorage.setItem(keyStressVal, todoList[keyValue]);
+    localStorage.setItem(keyStressVal, stressList[keyStressVal]);
 
     document.getElementById(this.id).remove();
     document.getElementById(this.id).remove();
