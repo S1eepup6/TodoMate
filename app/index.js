@@ -153,7 +153,7 @@ clickStart();
 function reshowingList(){
     keyValue = today.getFullYear() + '' + today.getMonth()+ '' + today.getDate();
     todoList[keyValue] = localStorage.getItem(keyValue);
-    if(todoList[keyValue] === undefined || todoList[keyValue] === null){
+    if(todoList[keyValue] === undefined || todoList[keyValue] === null || todoList[keyValue].length === 0){
         inputList.textContent = '';
         todoList[keyValue] = [];
         const $divs = document.querySelectorAll('#input-list > div');
@@ -167,44 +167,41 @@ function reshowingList(){
     }
     else{
         todoList[keyValue] = todoList[keyValue].split(',')
-        if(todoList[keyValue].length ===0){
-        inputList.textContent = "";
         const $divs = document.querySelectorAll('#input-list > div');
         $divs.forEach(function(e){
-          e.remove();
-        });
-        const $btns = document.querySelectorAll('#input-list > button');
-        $btns.forEach(function(e1){
-          e1.remove();
-        });
-        }else{
-            const $divs = document.querySelectorAll('#input-list > div');
-            $divs.forEach(function(e){
             e.remove();
             });
-            const $btns = document.querySelectorAll('#input-list > button');
-            $btns.forEach(function(e1){
+        const $btns = document.querySelectorAll('#input-list > button');
+        $btns.forEach(function(e1){
             e1.remove();
             });
+        
+        for(var i = 0; i < todoList[keyValue].length; i++){
+            dataCnt ++;
             var $div = document.createElement('div');
-            for(var i = 0; i < todoList[keyValue].length; i++){
-                var $div = document.createElement('div');
-                $div.textContent = '-' + todoList[keyValue][i];
-                var $btn = document.createElement('button');
-                $btn.setAttribute('type', 'button'); 
-                $btn.setAttribute('id', 'del-ata');
-                $btn.setAttribute('id', dataCnt+keyValue);
-                $btn.setAttribute('class', 'del-data');
-                $btn.textContent = delText;
-                inputList.appendChild($div);
-                inputList.appendChild($btn);
-                $div.addEventListener('click',checkList);
-                $btn.addEventListener('click',deleteTodo);
-                inputBox.value = '';
-                function deleteTodo(){
-                    $div.remove();
-                    $btn.remove();
+            $div.setAttribute('id', dataCnt+keyValue);
+            $div.textContent = todoList[keyValue][i];
+            var $btn = document.createElement('button');
+            $btn.setAttribute('type', 'button'); 
+            $btn.setAttribute('id', 'del-ata');
+            $btn.setAttribute('id', dataCnt+keyValue);
+            $btn.setAttribute('class', 'del-data');
+            $btn.textContent = delText;
+            inputList.appendChild($div);
+            inputList.appendChild($btn);
+            $div.addEventListener('click',checkList);
+            $btn.addEventListener('click',deleteTodo);
+            inputBox.value = '';
+            function deleteTodo(){
+                const targetText = document.getElementById(this.id).textContent
+                const idx = todoList[keyValue].indexOf(targetText)
+                if (idx > -1) {
+                    todoList[keyValue].splice(idx, 1);
                 }
+                localStorage.setItem(keyValue, todoList[keyValue]);
+
+                document.getElementById(this.id).remove();
+                this.remove();
             }
         }
     }
@@ -214,16 +211,18 @@ function reshowingList(){
 var inputBox = document.getElementById('input-box');
 var inputDate = document.getElementById('input-data');
 var inputList = document.getElementById('input-list');
-var delText = 'X';
 inputDate.addEventListener('click',addTodoList);
-var dataCnt = 1;
+var delText = 'X';
+var dataCnt = 0;
 var keyValue = today.getFullYear() + '' + today.getMonth()+ '' + today.getDate();
 let todoList = [];
 todoList[keyValue] = null;
 reshowingList();
 function addTodoList(){
+    dataCnt++;
     var $div = document.createElement('div');
-    $div.textContent = '-' + inputBox.value;
+    $div.setAttribute('id', dataCnt+keyValue);
+    $div.textContent = inputBox.value;
     var $btn = document.createElement('button');
     $btn.setAttribute('type', 'button'); 
     $btn.setAttribute('id', 'del-ata');
@@ -232,19 +231,27 @@ function addTodoList(){
     $btn.textContent = delText;
     inputList.appendChild($div);
     inputList.appendChild($btn);
-    todoList[keyValue].push(inputBox.value);
+
+    const inputValue = inputBox.value
+    todoList[keyValue].push(inputValue);
 
     localStorage.setItem(keyValue, todoList[keyValue]);
 
-    dataCnt++;
     inputBox.value = '';
     $div.addEventListener('click',checkList);
     $btn.addEventListener('click',deleteTodo);
     function deleteTodo(){
-        $div.remove();
-        $btn.remove();
-    }
+        const targetText = document.getElementById(this.id).textContent
+        const idx = todoList[keyValue].indexOf(targetText)
+        console.log(idx);
+        if (idx > -1) {
+            todoList[keyValue].splice(idx, 1);
+        }
+        localStorage.setItem(keyValue, todoList[keyValue]);
 
+        document.getElementById(this.id).remove();
+        this.remove();
+    }
 }
 
 function checkList(e){
