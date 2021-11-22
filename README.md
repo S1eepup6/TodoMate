@@ -1,7 +1,7 @@
 TodoMate
 ===
-OSS TEAM 8
----
+# OSS TEAM 8
+
 Your best calendar... and stress
 
 
