@@ -1,0 +1,37 @@
+.stress0 {
+    background: linear-gradient(to right, #AD270A, #0b0809 1%);
+}
+.stress1 {
+    background: linear-gradient(to right, #AD270A, #0b0809 20%);
+}
+.stress2 {
+    background: linear-gradient(to right, #AD270A, #0b0809 40%);
+}
+.stress3 {
+    background: linear-gradient(to right, #AD270A, #0b0809 60%);
+}
+.stress4 {
+    background: linear-gradient(to right, #AD270A, #0b0809 80%);
+}
+.stress5 {
+    background: linear-gradient(to right, #AD270A, #0b0809 100%);
+}
+
+.stressDay0 {
+}
+.stressDay1 {
+    color: deepskyblue;
+}
+.stressDay2 {
+    color: darkred;
+    filter: brightness(175%)
+}
+.stressDay3 {
+    filter: brightness(75%)
+}
+.stressDay4 {
+    filter: brightness(100%)
+}
+.stressDay5 {
+    filter: brightness(125%)
+}

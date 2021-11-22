@@ -98,6 +98,7 @@ body {
   width: 60%;
   float: left;
   color: #2ebaf1;
+  position: relative;
 }
 .input-list > .checked {
   color: #ffffff;
@@ -221,7 +222,10 @@ body {
     font-size: 14px;
     width: 60%;
     float: left;
-    color: #2ebaf1;
+    /* color: #2ebaf1; */
+    color: #ffffff;
+    z-index: 2;
+    border-radius: 3px;
   }
   .del-data {
     display: block;
