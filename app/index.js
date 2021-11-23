@@ -342,6 +342,17 @@ function stressUp(){
         tmpStressList.push(tmpStress[key])
     }
     localStorage.setItem(keyStressVal, tmpStressList);
+
+    const stressVal = tmpStressList.reduce(function add(sum, val) {
+        return Number(sum) + Number(val);
+    });
+
+    let $tdToday = document.getElementById(String(today.getDate()))
+
+    if (stressVal <= 0) $tdToday.setAttribute('class', 'stressDay0');
+    else if (stressVal <= 10) $tdToday.setAttribute('class', 'stressDay1');
+    else $tdToday.setAttribute('class', 'stressDay2');
+    $tdToday.classList.add('active');
 }
 
 function stressDn(){
@@ -355,4 +366,14 @@ function stressDn(){
         tmpStressList.push(tmpStress[key])
     }
     localStorage.setItem(keyStressVal, tmpStressList);
+    
+    const stressVal = tmpStressList.reduce(function add(sum, val) {
+        return Number(sum) + Number(val);
+    });
+    let $tdToday = document.getElementById(String(today.getDate()))
+
+    if (stressVal <= 0) $tdToday.setAttribute('class', 'stressDay0');
+    else if (stressVal <= 10) $tdToday.setAttribute('class', 'stressDay1');
+    else $tdToday.setAttribute('class', 'stressDay2');
+    $tdToday.classList.add('active');
 }
