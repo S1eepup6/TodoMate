@@ -1,5 +1,5 @@
-var time = 0;
-var starFlag = true;
+let time = 0;
+let starFlag = true;
 $(document).ready(function(){
   buttonEvt();
 });
@@ -9,10 +9,10 @@ function init(){
 }
 
 function buttonEvt(){
-  var hour = 0;
-  var min = 0;
-  var sec = 0;
-  var timer;
+  let hour = 0;
+  let min = 0;
+  let sec = 0;
+  let timer;
 
   // start btn
   $("#startbtn").click(function(){
@@ -34,9 +34,9 @@ function buttonEvt(){
         sec = time%60;
         min = min%60;
 
-        var th = hour;
-        var tm = min;
-        var ts = sec;
+        let th = hour;
+        let tm = min;
+        let ts = sec;
         if(th<10){
         th = "0" + hour;
         }
