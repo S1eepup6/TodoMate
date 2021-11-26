@@ -14,7 +14,8 @@ Stress Calendar v.1.0.0
 * Stress setting
 ![image](https://user-images.githubusercontent.com/80056110/143265025-4b3f7dd8-79de-4e5f-8404-4807038af3e4.png)
 
-
+## Demo Video  
+Please see our demo video at https://youtu.be/r-ngEQwk7MA
 ### Member
 * 2017314106 한재웅 hxxjaewoong17@gmail.com
 * 2018312179 박정인  dls0901@naver.com
