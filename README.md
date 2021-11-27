@@ -19,7 +19,7 @@ Stress Calendar v.1.0.0
 ![image](https://github.com/keyhundred/TodoMate/blob/main/img/Screenshot_timer.png)
 
 ## Demo Video  
-Please see our demo video at https://youtu.be/r-ngEQwk7MA
+Please see our demo video at https://youtu.be/YWGaSu9kebY
 ### Member
 * 2017314106 한재웅 hxxjaewoong17@gmail.com
 * 2018312179 박정인  dls0901@naver.com
