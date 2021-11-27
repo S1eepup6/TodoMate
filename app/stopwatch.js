@@ -1,5 +1,26 @@
-let time = 0;
+let time = Number(localStorage.getItem('tm-timer'));
 let starFlag = true;
+
+min = Math.floor(time/60);
+hour = Math.floor(min/60);
+sec = time%60;
+min = min%60;
+
+let th = hour;
+let tm = min;
+let ts = sec;
+if(th<10){
+  th = "0" + hour;
+}
+if(tm < 10){
+  tm = "0" + min;
+}
+if(ts < 10){
+  ts = "0" + sec;
+}
+
+document.getElementById("time").innerHTML = th + ":" + tm + ":" + ts;
+
 $(document).ready(function(){
   buttonEvt();
 });
@@ -48,6 +69,7 @@ function buttonEvt(){
         }
 
         document.getElementById("time").innerHTML = th + ":" + tm + ":" + ts;
+        localStorage.setItem('tm-timer', time);
       }, 1000);
     }
   });
@@ -70,6 +92,7 @@ function buttonEvt(){
       clearInterval(timer);
       starFlag = true;
       time = 0;
+      localStorage.setItem('tm-timer', time);
       init();
     }
   });
