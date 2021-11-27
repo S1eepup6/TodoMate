@@ -18,7 +18,7 @@ function buttonEvt(){
   $("#startbtn").click(function(){
 
     if(starFlag){
-      $(".fa").css("color","#FAED7D")
+      $(".fa").css("color","#DCDCDC")
       this.style.color = "#4C4C4C";
       starFlag = false;
 
@@ -55,7 +55,7 @@ function buttonEvt(){
   // pause btn
   $("#pausebtn").click(function(){
     if(time != 0){
-      $(".fa").css("color","#FAED7D")
+      $(".fa").css("color","#DCDCDC")
       this.style.color = "#4C4C4C";
       clearInterval(timer);
       starFlag = true;
@@ -65,7 +65,7 @@ function buttonEvt(){
   // stop btn
   $("#stopbtn").click(function(){
     if(time != 0){
-      $(".fa").css("color","#FAED7D")
+      $(".fa").css("color","#DCDCDC")
       this.style.color = "#4C4C4C";
       clearInterval(timer);
       starFlag = true;

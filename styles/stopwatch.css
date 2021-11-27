@@ -1,25 +1,26 @@
 .box {
+  margin-top: 10px;
   margin: auto;
   width: 200px;
-  height: 200px;
+  height: 100px;
 }
 .timerBox {
   width: 200px;
   outline: 2px solid rgb(129, 129, 129);
 }
 .timerBox .time {
-  font-size: 30pt;
+  font-size: 15pt;
   color: #ffffff;
   text-align: center;
   font-family: sans-serif;
 }
 .btnBox {
-  margin: 20px auto;
+  margin: 10px auto;
   text-align: center;
 }
 .btnBox .fa {
   margin: 0px 5px;
-  font-size: 30pt;
+  font-size: 15pt;
   color: #ffffff;
   cursor: pointer;
 }
