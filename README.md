@@ -10,9 +10,13 @@ Stress Calendar v.1.0.0
 4. Additionally, it provides a function to measure study time.
 ## Example
 * The basic screen.
-![image](https://user-images.githubusercontent.com/80056110/143265269-7ed452a3-685e-4f02-acd9-6c741490baf4.png)
-* Stress setting
-![image](https://user-images.githubusercontent.com/80056110/143265025-4b3f7dd8-79de-4e5f-8404-4807038af3e4.png)
+![image](https://github.com/keyhundred/TodoMate/blob/main/img/Screenshot_day.png)
+* The basic screen (from 18 to 6).
+![image](https://github.com/keyhundred/TodoMate/blob/main/img/Screenshot_night.png)
+* Set Todo & Stress.
+![image](https://github.com/keyhundred/TodoMate/blob/main/img/Screenshot_stress.png)
+* Use timer.
+![image](https://github.com/keyhundred/TodoMate/blob/main/img/Screenshot_timer.png)
 
 ## Demo Video  
 Please see our demo video at https://youtu.be/r-ngEQwk7MA
