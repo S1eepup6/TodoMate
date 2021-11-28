@@ -8,6 +8,10 @@ Stress Calendar v.1.0.0
 2. Like a planner, provide assignment handling function by date.
 3. Visually express the level of stress in each assignment.
 4. Additionally, it provides a function to measure study time.
+
+## How to use
+Just enter https://keyhundred.github.io/TodoMate/.
+
 ## Example
 * The basic screen.
 ![image](https://github.com/keyhundred/TodoMate/blob/main/img/Screenshot_day.png)
