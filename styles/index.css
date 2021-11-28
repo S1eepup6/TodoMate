@@ -180,6 +180,21 @@ body {
     height: 600px;
     padding: 90px 4px 20px 0;
   }
+  .content-left-day {
+    background-color: skyblue;
+    background-image: radial-gradient(
+        white,
+        rgba(255, 255, 255, 0.2) 140px,
+        transparent 190px
+      );
+    background-size: 600px 800px;
+    background-position: 0px -400px;
+    color: #ffffff;
+    float: left;
+    width: 270px;
+    height: 600px;
+    padding: 90px 4px 20px 0;
+  }
 
   .main-wrap {
     text-align: center;
